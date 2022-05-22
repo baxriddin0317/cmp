@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.bef{
+    display: flex;
+    align-items: center;
+    &::before{
+        content: "";
+        margin-right: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #F07566;
+    }
+}
+
+.title__span{
+    position: relative;
+    display: block;
+    z-index: -1;
+    &::before{
+        content: url("./Assets/line.png");
+        width: 100%;
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+    }
+}
